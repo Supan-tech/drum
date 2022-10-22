@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: hsl(203, 50%, 10%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    transform: translateY(-20px);
+    font-size: 3rem;
+}
+
+.wrapper {
+    transform: translateY(20px);
+    max-width: 1000px;
+    margin-inline: auto;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.key {
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 8px;
+    min-width: 80px;
+    padding: 8px;
+    transition: all .07s ease;
+}
+
+.key>.sound {
+    text-transform: capitalize;
+}
+
+.playing {
+    filter: opacity(.1);
+}
+
+@media only screen and (max-width: 400px) {
+    .wrapper {
+        width: 80%;
+    }
+}
